@@ -1,13 +1,14 @@
 
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import "./assets/style.css"
 
 //components
 
 //pages
-import Portfolio from "./components/pages/Portfolio";
-import About from "./components/pages/About";
-import Contact from "./components/pages/Contact";
+import Portfolio from "./components/pages/Portfolio/Portfolio";
+import About from "./components/pages/About/About";
+import Contact from "./components/pages/Contact/Contact";
 
 
 
