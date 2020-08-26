@@ -14,6 +14,7 @@ function Contact() {
         email: "",
         message: ""
       });
+    const [alert, setAlert] = useState("");
     
       function handleFormSubmit(event) {
         event.preventDefault();
@@ -26,6 +27,7 @@ function Contact() {
     
             .then((res) => {
               console.log(res);
+              setAlert("Sign Up Successful!");
               setFormObject({
                 name:"",
                 email:"",
@@ -58,8 +60,10 @@ function Contact() {
        <section className="row mt-5 p-3 border-bottom border-dark bg-light rounded">
             
             <h1>
-                Contact
+                Send me a Message
             </h1>
+            <h6 className={alert.includes("Invalid") ? "alert-danger" : "alert-success"}>{alert}</h6>
+
                             
         </section>
                 
@@ -71,10 +75,10 @@ function Contact() {
                     
                                           {/* onClick needs the () => function() format so the function actally waits for the button click */}
                                           {/* onChange={e => setName(e.target.value)} */}
-                    <input type="text" name="name" value={formObject.name} placeholder="Your name.." onChange={handleInputChange}/>
+                    <input type="text" name="name" value={formObject.name} placeholder="Your name" onChange={handleInputChange}/>
                     
                     
-                    <input type="text" name="email" value={formObject.email} placeholder="Email.." onChange={handleInputChange}/>
+                    <input type="text" name="email" value={formObject.email} placeholder="Email" onChange={handleInputChange}/>
 
                     
                     {/* style={"height:200px"} */}
@@ -93,7 +97,7 @@ function Contact() {
                     <br></br>
                     <a href="https://www.linkedin.com/in/timwinters99/" className="link">LinkedIn</a>
                     <br></br>
-                    <a href="https://github.com/erasersleeve/Responsive-Portfolio/blob/master/assets/supplemental/Resume.pdf" className="link">Resume</a>
+                    <a href="" className="link">Resume</a>
                 </div>
                    
             </aside>           

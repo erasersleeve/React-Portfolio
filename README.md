@@ -1,6 +1,6 @@
 # React Portfolio
   ## Description
-  This is my personal portfolio made using React
+  This is my personal portfolio made using React and MongoDb
   ## Table of Contents
   *  [Links](#Links)
   *  [Images](#Images)
