@@ -1,20 +1,48 @@
 import React, { useState } from "react";
-import Navbar from "../../components/Navbar"
+import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import API from "../../utils/API";
+
+
 
 
 
 function Contact() {
-    const [name, setName] = useState();
-    const [email, setEmail] = useState();
-    const [subject, setSubject] = useState();
+    const [formObject, setFormObject] = useState({
+        name: "",
+        email: "",
+        message: ""
+      });
     
-    const handleSubmit = e => {
-        e.preventDefault();
-        console.log("Name: " + name);
-        console.log("Email: " + email);
-        console.log("Subject: " + subject);
-      };
+      function handleFormSubmit(event) {
+        event.preventDefault();
+        if (formObject.name && formObject.email && formObject.message) {
+          API.saveMessage({
+            name: formObject.name,
+            email: formObject.email,
+            message: formObject.message,
+          })
+    
+            .then((res) => {
+              console.log(res);
+              if (res.data) {
+                console.log("form submitted: ", formObject);
+    
+              } else {
+                console.log("Error sending message to database");
+              }
+            })
+            .catch((err) => {console.log(err)});
+        }
+      }
+
+
+    // Handles updating component state when the user types into the input field
+    function handleInputChange(event) {
+        const { name, value } = event.target;
+        // console.log(formObject)
+        setFormObject({ ...formObject, [name]: value });
+  }
 
     return(
     <>
@@ -32,19 +60,21 @@ function Contact() {
         <section className="row rounded pb-3">
             
             <div className="col-12 col-md-8"> 
-                <form action="action_page.php" onSubmit={handleSubmit}>
-            
-                    <label htmlFor="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your name.." onChange={e => setName(e.target.value)}/>
+                <form className="Message">
                     
-                    <label htmlFor="email">Email</label>
-                    <input type="text" name="email" id="email" placeholder="Email.." onChange={e => setEmail(e.target.value)}/>
+                    
+                                          {/* onClick needs the () => function() format so the function actally waits for the button click */}
+                                          {/* onChange={e => setName(e.target.value)} */}
+                    <input type="text" name="name" value={formObject.name} placeholder="Your name.." onChange={handleInputChange}/>
+                    
+                    
+                    <input type="text" name="email" value={formObject.email} placeholder="Email.." onChange={handleInputChange}/>
 
-                    <label htmlFor="subject">Subject</label>
+                    
                     {/* style={"height:200px"} */}
-                    <textarea id="subject" name="subject" placeholder="Write something.."onChange={e => setSubject(e.target.value)}/>
-                
-                    <input type="submit" value="Submit" />
+                    <textarea id="message" name="message" value={formObject.message} placeholder="Message" onChange={handleInputChange}/>
+
+                    <button className="btn" disabled={!formObject.name && formObject.email && formObject.message} onClick={handleFormSubmit}>Send</button>
 
                 </form>
             </div>     
