@@ -97,7 +97,7 @@ function Contact() {
                     <br></br>
                     <a href="https://www.linkedin.com/in/timwinters99/" className="link">LinkedIn</a>
                     <br></br>
-                    <a href="" className="link">Resume</a>
+                    <a href="https://github.com/erasersleeve/React-Portfolio/blob/master/client/src/assets/supplemental/Resume.pdf" className="link">Resume</a>
                 </div>
                    
             </aside>           
