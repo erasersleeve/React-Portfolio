@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "../../Navbar"
-import Footer from "../../Footer";
-import Picture from "../../../assets/images/head.jpg";
+import Navbar from "../../components/Navbar"
+import Footer from "../../components/Footer";
+import Picture from "../../assets/images/head.jpg";
 
 function About() {
     return(

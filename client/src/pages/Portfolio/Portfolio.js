@@ -1,14 +1,14 @@
 import React, { Profiler } from "react";
-import Navbar from "../../Navbar";
-import Footer from "../../Footer";
-import Project from "../../Project";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import Project from "../../components/Project";
 
-import Abacus from "../../../assets/images/Projects/abacus.png"
-import Multimedia from "../../../assets/images/Projects/multimedia.png"
-import Budget from "../../../assets/images/Projects/budget.png"
-import Directory from "../../../assets/images/Projects/directory.png"
-import NoteTaker from "../../../assets/images/Projects/notetaker.png"
-import Workout from "../../../assets/images/Projects/workout.png"
+import Abacus from "../../assets/images/Projects/abacus.png"
+import Multimedia from "../../assets/images/Projects/multimedia.png"
+import Budget from "../../assets/images/Projects/budget.png"
+import Directory from "../../assets/images/Projects/directory.png"
+import NoteTaker from "../../assets/images/Projects/notetaker.png"
+import Workout from "../../assets/images/Projects/workout.png"
 
 
 

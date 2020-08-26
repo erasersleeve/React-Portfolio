@@ -1,29 +1,21 @@
-
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import "./assets/style.css"
+import Books from "./pages/Books";
+import Detail from "./pages/Detail";
+import NoMatch from "./pages/NoMatch";
+import Nav from "./components/Nav";
+import { BrowserRouter } from "react-router-dom";
 
-//components
-
-//pages
-import Portfolio from "./components/pages/Portfolio/Portfolio";
-import About from "./components/pages/About/About";
-import Contact from "./components/pages/Contact/Contact";
-
-
-
-
+// The app will not render correctly until you setup a Route component.
+// Refer to the Basic Example documentation if you need to.
+// (https://reacttraining.com/react-router/web/example/basic)
 function App() {
   return (
-      <Router>
-         
-          <main className="container-md">
-              <Route exact path="/" component={About} />
-              <Route exact path="/portfolio" component={Portfolio} />
-              <Route exact path="/contact" component={Contact} />
-          </main>
-          
-      </Router>
+    <BrowserRouter>
+    <div>
+      <Nav />
+      <Books />
+    </div>
+    </BrowserRouter>
   );
 }
 
