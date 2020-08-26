@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import API from "../../utils/API";
+import { set } from "mongoose";
 
 
 
@@ -25,6 +26,11 @@ function Contact() {
     
             .then((res) => {
               console.log(res);
+              setFormObject({
+                name:"",
+                email:"",
+                message:""
+              });
               if (res.data) {
                 console.log("form submitted: ", formObject);
     
