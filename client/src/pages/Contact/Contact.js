@@ -19,6 +19,8 @@ function Contact() {
     return(
     <>
     <Navbar></Navbar>
+    <main className="container">
+
        <section className="row mt-5 p-3 border-bottom border-dark bg-light rounded">
             
             <h1>
@@ -62,6 +64,7 @@ function Contact() {
             
                         
         </section>
+    </main>
 
         <Footer></Footer>
     </>
