@@ -9,6 +9,7 @@ import Budget from "../../assets/images/Projects/budget.png"
 import Directory from "../../assets/images/Projects/directory.png"
 import NoteTaker from "../../assets/images/Projects/notetaker.png"
 import Workout from "../../assets/images/Projects/workout.png"
+import Google from "../../assets/images/Projects/google.png"
 
 
 
@@ -34,7 +35,7 @@ function Portfolio() {
                 <Project image={Multimedia} alt={"Multimedia Search"} title={"Read it, Watch it!"} deployed={"https://erasersleeve.github.io/Multimedia-Search-Engine/"} repo={"https://github.com/erasersleeve/Multimedia-Search-Engine"}/>
                 <Project image={Budget} alt={"Budget Tracker"} title={"Budget Tracker"} deployed={"http://safe-spire-11167.herokuapp.com/"} repo={"https://github.com/erasersleeve/Progressive-Budget-Tracker"}/>
                 <Project image={Directory} alt={"Employee Directory"} title={"Employee Directory"} deployed={"https://ancient-chamber-45912.herokuapp.com/"} repo={"https://github.com/erasersleeve/Employee-Directory"}/>
-                <Project image={NoteTaker} alt={"Note Taker"} title={"Note Taker"} deployed={"https://polar-everglades-30981.herokuapp.com/"} repo={"https://github.com/erasersleeve/Note-Taker"}/>
+                <Project image={Google} alt={"Google Books"} title={"Google Books Search"} deployed={"https://radiant-shore-36280.herokuapp.com/"} repo={"https://github.com/erasersleeve/Google-Books-Search"}/>
                 <Project image={Workout} alt={"Work Out Tracker"} title={"Work Out Tracker"} deployed={"https://stark-reaches-68321.herokuapp.com/"} repo={"https://github.com/erasersleeve/Workout-Tracker"}/>
                 
 
