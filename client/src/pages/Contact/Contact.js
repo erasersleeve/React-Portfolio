@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import API from "../../utils/API";
+import github from "../../assets/images/icons/github.svg"
+import linkedin from "../../assets/images/icons/linkedin.svg"
+import cv from "../../assets/images/icons/cv.svg"
 import { set } from "mongoose";
 
 
@@ -85,6 +88,9 @@ function Contact() {
                     <textarea id="message" name="message" value={formObject.message} placeholder="Message" onChange={handleInputChange}/>
 
                     <button className="btn" disabled={!formObject.name && formObject.email && formObject.message} onClick={handleFormSubmit}>Send</button>
+                    <br></br>
+                    <br></br>
+                    <h3>Or reach me at timwinters99@gmail.com</h3>
 
                 </form>
             </div>     
@@ -93,11 +99,29 @@ function Contact() {
             <aside className="card col-12 col-md-4 border-bottom-0">    
                 <div className="card-body text-center">
                     <h2 className="card-title border-bottom">External Links</h2>
-                    <a href="https://github.com/erasersleeve" className="link">Github</a>
+                                        
+                    <a href="https://github.com/erasersleeve" className="link">
+                      <img src={github} width="50" height="50"></img>
+                    </a>
+
                     <br></br>
-                    <a href="https://www.linkedin.com/in/timwinters99/" className="link">LinkedIn</a>
                     <br></br>
-                    <a href="https://github.com/erasersleeve/React-Portfolio/blob/master/client/src/assets/supplemental/Resume.pdf" className="link">Resume</a>
+
+                    <a href="https://www.linkedin.com/in/timwinters99/" className="link">
+                      <img src={linkedin} width="50" height="50"></img>
+                    </a>
+
+                    <br></br>
+                    <br></br>
+
+                    <a href="https://github.com/erasersleeve/React-Portfolio/blob/master/client/src/assets/supplemental/Resume.pdf" className="link">
+                      <img src={cv} width="50" height="50"></img>
+                    </a>
+
+                    <br></br>
+                    <br></br>
+
+                    
                 </div>
                    
             </aside>           
