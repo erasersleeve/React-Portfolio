@@ -19,7 +19,8 @@ function About() {
                 <section className="col-7">   
                     <img src={Picture} alt="headshot" className="headshot pr-3"/>
                     <p>
-                        Hello and welcome! My name is Tim Winters and this is my portfolio site. I'm a 26 year old with a background in education and the humanities trying to start a new career path. On my portfolio page you can find some examples of my work, and if you want to know more or reach out to me you can find links to my other accounts as well as a form to send me a message on the Contact page. 
+
+                        Hello and welcome to my portfolio site! I am Tim Winters, and I am a full stack web developer. My professional background is in education and the humanities, but I wanted to make a change and therefore completed the University of Pennslyvania's LPS Coding Bootcamp program. Web development, and coding in general, satisfies my problem solving tick whie also allowing for great creativity, collaboration, and curiosity. On my portfolio page one can find examples of my work, and contact information is available on the contact page.  
                     
                     </p>              
                 </section>  
